@@ -1,0 +1,29 @@
+---
+title: "Lab 6"
+author: "Corinna Hong"
+date: "November 6, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, message = FALSE}
+
+library(tidyverse)
+
+sleep <- read.csv("sleep.csv")
+
+
+```
+
+```{r}
+
+sleep_scatter <- ggplot(sleep, aes(x = gestation, y = total_sleep)) +
+  geom_point()
+sleep_scatter
+  
+
+```
+
